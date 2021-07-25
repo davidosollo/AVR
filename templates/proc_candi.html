@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Custom File-Input</title>
+    <link rel="stylesheet" href="{{ url_for('static',
+	      filename='avr_form.css') }}">   
+	 <link rel="stylesheet" href="{{ url_for('static',
+	      filename='avr.css') }}">   
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/static/js/inputfile-custom.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script type="text/javascript">
+      function loading(){
+            $("#WaitDiv").show();
+            $("#WaitMessage").show()
+    
+        }
+
+	</script>
+    
+<style>
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+    
+  </head>
+  <body>
+  
+     <div id="procesar_candidatos" class="form-style-3">
+        <!-- {% from "macros/dropdown.html" import dropdown %} -->
+
+			<form id="myform" method="post" action="ProcModelos" enctype="multipart/form-data">
+			<fieldset><legend>Procesar Candidatos</legend>
+
+			      <!-- <textarea readonly id="textProcess" name="textprocess" style="min-width: 70%; min-height:150px; resize: none;">
+  								{{process_message_load}}
+  					</textarea>
+  					-->
+
+  				   <p style="color:#285887;"> Archivo a Procesar: {{archivo_procesar}}</p>
+
+				   <p style="color:#252a2e;" class="font_message" >Nombre del Proyecto:</p>
+				   <select id="proyec_name" name="proyec_name">
+				   		{% for x in proy_list %}
+                       		<option value="{{ x }}"{% if loop.first %} SELECTED{% endif %}>{{ x }}</option>
+				   		{% endfor %}
+				   </select>
+				   <p id="WaitMessage"style="color: #285887; display: none;" class="font_message" >Processando Candidatos, favor de esperar</p>
+				   <div id="WaitDiv"  style="display: none;" class="loader">
+				   </div>
+
+         		<p>
+	         		<input type="submit" name="submit" value="Procesar Modelos" onclick="loading();" class="formButton">
+         		</p>
+         	   <p style="color:red;" class="font_message" >{{error_modelo}}</p>
+         	   <p style="color:green;" class="font_message" >{{status_procesado}}</p>
+
+      	</fieldset>
+			</form>
+		</div>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+
+rm avr.sqlite
+python3 create_avr_db.py
+sqlite3 < create_tables.sql
+sqlite3 < create_avr_users_table.sql
+sqlite3 avr.sqlite
+.tables
+.schema base
+.schema users
+
+python AnalisisProfesor.py
+
+
+SELECT name FROM sqlite_master
+  WHERE type IN ('table','view') AND name NOT LIKE 'sqlite_%' ORDER BY 1;
+
+-----
+
+csv
+
+.mode csv
+.import /home/davidosollo/UAG/UAGProjects/AVRWeb/uploads/BASE_DATOS_TESIS.csv base

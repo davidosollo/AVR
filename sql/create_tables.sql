@@ -1,0 +1,138 @@
+
+drop table if exists base;
+	CREATE TABLE base (
+     NÓMINA INTEGER,
+     NOMBRE TEXT,
+     APELLIDOPATERNO TEXT,	
+     APELLIDOMATERNO TEXT,	
+     RFC TEXT,
+     CURP TEXT,
+     IMSS TEXT,
+     GRADO TEXT,
+     SEXO TEXT,
+     ESTADOCIVIL TEXT,
+     COLIONIA TEXT,
+     CIUDAD TEXT,
+     CP TEXT,
+     FECHANACIMIENTO TEXT,
+     RELIGION TEXT,
+     PUESTO TEXT,
+     RHVCODDEP TEXT,
+     RHVNOMDEP TEXT,
+     FECHA_SOLICITUD_INGRESO TEXT,
+     FECHA_ALTA TEXT,
+     FECHA_BAJA TEXT,
+     MOTIVO_BAJA TEXT,
+     ORIGEN_BAJA TEXT,
+     CODIGO_PUESTO_GENERICO TEXT,	
+     PUESTO_GENERICO TEXT,
+     FECHAEXAMENMEDICO TEXT,
+     RESULTADOEXAMENMEDICO TEXT,
+     OBSERVACIONEXAMENMEDICO TEXT,
+     FECHAEXAMENPSICOLOGICO TEXT,
+     RESULTADOEXAMENPSICOLOGICO TEXT,
+     PSICOMETRIA TEXT,
+     OBSERVACIONg
+
+   );
+   
+drop table if exists familiares;
+	CREATE TABLE familiares (
+	 NÓMINA INTEGER,
+     APVNOMFAM TEXT,
+     ApvDescFam TEXT,
+     APVFECHANACFAM TEXT,
+     APVRELIGIONFAM TEXT,
+     RHVESTADO TEXT,
+     RHVMUNICIPIO TEXT,
+     APVPROFESION TEXT,
+     APVINSTITUCION TEXT,
+     APVGRADO TEXT,
+     apvTelefonoFam TEXT
+   );
+   
+drop table if exists beneficiarios;
+	CREATE TABLE beneficiarios (
+     NÓMINA INTEGER,
+	 NOMBRE TEXT,
+     DEDICACION TEXT,
+     ANTANIOS TEXT,
+     NOMBREBENEF TEXT,
+     ParentescoBenf TEXT,
+     RHVFECHACON TEXT,
+     SEXOBENEF TEXT,
+     FECHANACBENEF TEXT
+   );
+   
+drop table if exists experiencia_laboral;
+	CREATE TABLE experiencia_laboral (
+	  NÓMINA INTEGER,
+     APVNOMAPLI TEXT,
+     apvExpLabId TEXT,
+     APVCODAPL TEXT,
+     apvCodApli TEXT,
+     APVCODEMPRESA TEXT,
+     APVCODCARGO  TEXT,
+     APVINICIO  TEXT,
+     APVTERMINO  TEXT,
+     APVDOMICILIO TEXT,
+     APVPUESTO TEXT,
+     APVSUELDOINICIAL TEXT,
+     APVSUELDOFINAL TEXT,
+     APVNOMBREJEFE TEXT,
+     APVCARGOJEFE TEXT,
+     APVSUPERVISION TEXT,
+     APVSEPARACION TEXT,
+     Empresa TEXT
+     
+   );
+   
+drop table if exists experiencia_docente;
+	CREATE TABLE experiencia_docente (
+	  NÓMINA INTEGER,
+     APVNOMAPLI TEXT,
+     APVCODAPLI TEXT,
+     APVINSTITUCION TEXT,
+     APVPUESTO TEXT,
+     APVANTIGUEDAD TEXT,
+     APVMATERIA TEXT,
+     Empresa TEXT
+   );
+
+drop table if exists idiomas;
+	CREATE TABLE idiomas (
+	  NÓMINA INTEGER,
+	  APVNOMAPLI TEXT,
+     ApvIdidi TEXT,
+     APVNIVCONVER TEXT,
+     APVFECHAGEN TEXT,
+     IdMov TEXT,
+     APVDESIDIOMA TEXT,
+     APVID TEXT
+   );
+   
+drop table if exists escolaridad;
+   CREATE TABLE escolaridad (
+	  NÓMINA INTEGER,
+     APVCURSO TEXT,
+     APVFECINI TEXT,
+     APVFECTER TEXT,
+     APVPLANTEL TEXT,
+     APVPROMEDIO TEXT,
+     APVTITULO TEXT,
+     APVTERMINADO TEXT,
+     TERMINADO TEXT
+   );
+   
+drop table if exists localidad;
+	CREATE TABLE localidad (
+     CIUDAD TEXT,
+     VALOR TEXT
+   );
+
+drop table if exists val_fam_profesion;
+	CREATE TABLE val_fam_profesion (
+     PROFESION TEXT,
+     VALOR TEXT
+   );
+   

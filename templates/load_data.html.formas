@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<title>First APP</title>
+	<link rel="stylesheet" href="{{ url_for('static',
+	      filename='avr_form.css') }}">
+	      
+</head>
+
+<script type="text/javascript" >
+
+</script>
+<body>
+   <div class="form-style-3">
+		<form method="post" action="index" enctype="multipart/form-data">
+		<fieldset><legend>Cargar Dataset</legend>
+
+		<div id="file">Chose file</div>
+		<input type="file" name="file" />
+
+			<p>
+            	<input type="submit" value="Cargar" class="formButton">
+         </p>
+      </fieldset>
+		</form>
+	</div>
+
+</body>
+	
+</html>

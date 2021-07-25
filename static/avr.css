@@ -1,0 +1,78 @@
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+  text-align: center;
+  min-height: 100vh;
+}
+body {
+ /* background-color: rgba(115, 194, 251, 0.3);*/
+}
+
+.ButonRojo {
+	font-weight:bold;
+	text-decoration:none;
+	font-family:Arial;
+	box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 4px 0px;
+	o-box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 4px 0px;
+	-moz-box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 4px 0px;
+	-webkit-box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 4px 0px;
+	background:#fa96ad;
+	background:-o-linear-gradient(90deg, #fa96ad, #f27583);
+	background:-moz-linear-gradient( center top, #fa96ad 5%, #f27583 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fa96ad), color-stop(1, #f27583) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa96ad', endColorstr='#f27583');
+	background:-webkit-linear-gradient(#fa96ad, #f27583);
+	background:-ms-linear-gradient(#fa96ad, #f27583);
+	background:linear-gradient(#fa96ad, #f27583);
+	text-indent:0px;
+	line-height:0px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:12px;
+	color:#9d3f4d;
+	width:63px;
+	height:0px;
+	padding:13px;
+	text-shadow:#ffadb7 0px 1px 0px;
+	border-color:#f27583;
+	border-width:1px;
+	border-style:solid;
+}
+
+.ButonRojo:active {
+	box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 0 0px;
+	o-box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 0 0px;
+	-moz-box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 0 0px;
+	-webkit-box-shadow:inset #ffffff 0px 1px 1px -1px,#9d3f4d 0px 0 0px;
+	position:relative;
+	top:4px
+}
+
+.ButonRojo:hover {
+	background:#f27583;
+	background:-o-linear-gradient(90deg, #f27583, #fa96ad);
+	background:-moz-linear-gradient( center top, #f27583 5%, #fa96ad 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f27583), color-stop(1, #fa96ad) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f27583', endColorstr='#fa96ad');
+	background:-webkit-linear-gradient(#f27583, #fa96ad);
+	background:-ms-linear-gradient(#f27583, #fa96ad);
+	background:linear-gradient(#f27583, #fa96ad);
+}
+
+.Font1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px #8E357B;
+}
+
+
+.Font1-2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-shadow: 2px 1px 1px #8E357B;
+  font-size: 50px;
+}

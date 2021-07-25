@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+<head>
+
+	<link rel="stylesheet" href="{{ url_for('static',
+	      filename='avr_login.css') }}">
+	      
+	<link rel="stylesheet" href="{{ url_for('static',
+	      filename='dsoo.css') }}">
+	       
+</head>
+
+
+<body>
+	<div class="center-screen">
+    	<div align="center">
+    	    <form action="/login" method="POST">
+    	    <p> <img src="/static/img/repo_digital.png" alt="repo_digital" width="60" height="60"> </p>
+        			<p class="big-green-text">AVR</p>
+        			<p class="small-green-text">Asistente Virtual de Reclutamiento</p>
+        			<p>
+            			<input type="text" placeholder="username" name="username" value="{{ request.form.username }}">
+        			</p>
+        			<p>
+            			<input type="password" placeholder="password" name="password" value="{{ request.form.password }}">
+        			</p>
+        			<p>
+            			<input type="submit" value="Entrar" class="myButProy">
+        		   </p>
+    		</form>
+    		<p style="color:red;">{{error}}
+    	</div>
+   </div>
+</body>
+
+</html>

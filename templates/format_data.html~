@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Custom File-Input</title>
+    <link rel="stylesheet" href="{{ url_for('static',
+	      filename='avr_form.css') }}">   
+	 <link rel="stylesheet" href="{{ url_for('static',
+	      filename='avr.css') }}">   
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/static/js/inputfile-custom.js"></script>
+  </head>
+  <body>
+  
+     <div class="form-style-3">
+        <!-- {% from "macros/dropdown.html" import dropdown %} -->
+			<form method="post" action="GenModelos" enctype="multipart/form-data">
+			<fieldset><legend>Configurar Datos</legend>
+			
+			      <textarea readonly id="textProcess" name="textprocess" style="min-width: 70%; min-height:150px; resize: none;">
+  								{{process_message_load}}
+  					</textarea>
+      		   <!--	<p>
+      				   {{ dropdown('usuario', usuarios, extra='id="usuarios_select"') }}
+         		</p>
+         		<p>
+      				   {{ dropdown('usuario', usuarios, extra='id="usuarios_select"') }}
+         		</p>   -->
+         		<p>
+	         		<input type="submit" value="Generar Modelos" class="formButton">
+         		</p>
+      	</fieldset>
+			</form>
+		</div>
+
+  </body>
+</html>
